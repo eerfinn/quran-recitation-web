@@ -26,7 +26,6 @@ export default function ForgotPasswordPage() {
 
         setIsLoading(true);
 
-        // Simulate API call
         setTimeout(() => {
             console.log('Forgot Password:', email);
             setIsSubmitted(true);
@@ -44,39 +43,36 @@ export default function ForgotPasswordPage() {
                         alt="Quran Recitation"
                         className="w-full h-full object-cover"
                     />
-                    <div className="absolute top-0 left-0 w-full h-1/2 bg-gradient-to-b from-gray-900/90 via-gray-900/50 to-transparent"></div>
-                    <div className="absolute bottom-0 left-0 w-full h-1/2 bg-gradient-to-t from-gray-900/90 via-gray-900/50 to-transparent"></div>
+                    <div className="absolute inset-0 bg-gray-900/60"></div>
                 </div>
 
-                <div className="relative z-10 flex flex-col justify-between h-full p-12">
-                    <div className="flex flex-col items-start space-y-8">
-                        <div className="flex items-center space-x-3">
-                            <div className="w-10 h-10 bg-emerald-500/20 backdrop-blur-md rounded-xl flex items-center justify-center border border-emerald-500/30 shadow-lg shadow-emerald-900/20">
-                                <BookOpen className="w-6 h-6 text-emerald-400" />
-                            </div>
-                            <span className="text-xl font-bold tracking-wide text-white drop-shadow-md">Qurani</span>
+                {/* Content - Centered Vertically */}
+                <div className="relative z-10 flex flex-col h-full p-12 w-full">
+                    {/* Logo at Top */}
+                    <div className="flex items-center space-x-3">
+                        <div className="w-10 h-10 bg-emerald-500/20 backdrop-blur-md rounded-xl flex items-center justify-center border border-emerald-500/30 shadow-lg shadow-emerald-900/20">
+                            <BookOpen className="w-6 h-6 text-emerald-400" />
                         </div>
+                        <span className="text-xl font-bold tracking-wide text-white drop-shadow-md">Qurani Website</span>
+                    </div>
 
-                        <div className="max-w-md">
-                            <h2 className="text-4xl font-bold mb-6 leading-tight text-white drop-shadow-lg">
+                    {/* Text - Centered Vertically */}
+                    <div className="flex-1 flex items-center justify-center">
+                        <div className="max-w-lg text-center">
+                            <h2 className="text-5xl font-bold mb-8 leading-tight text-white drop-shadow-xl">
                                 Kembalikan Akses<br />Akun Anda
                             </h2>
-                            <div className="pl-6 border-l-4 border-emerald-500 bg-gray-900/30 backdrop-blur-sm p-4 rounded-r-2xl border-t border-r border-b border-white/10">
-                                <p className="text-gray-100 text-lg leading-relaxed italic drop-shadow-md">
+                            <div className="inline-block bg-gray-900/40 backdrop-blur-sm p-6 rounded-3xl border border-white/10">
+                                <p className="text-gray-100 text-xl leading-relaxed italic drop-shadow-md">
                                     "Maka sesungguhnya bersama kesulitan ada kemudahan."
                                 </p>
-                                <span className="text-sm mt-3 block text-emerald-400 font-semibold drop-shadow-sm">- QS. Al-Insyirah: 5</span>
+                                <span className="text-base mt-4 block text-emerald-400 font-semibold drop-shadow-sm">- QS. Al-Insyirah: 5</span>
                             </div>
                         </div>
                     </div>
 
-                    <div className="flex items-center space-x-6 text-xs font-medium text-gray-300">
-                        <span>© 2025 Qurani App</span>
-                        <span className="w-1 h-1 rounded-full bg-gray-500"></span>
-                        <a href="#" className="hover:text-emerald-400 transition-colors">Privacy</a>
-                        <span className="w-1 h-1 rounded-full bg-gray-500"></span>
-                        <a href="#" className="hover:text-emerald-400 transition-colors">Terms</a>
-                    </div>
+                    {/* Empty footer space */}
+                    <div className="h-10"></div>
                 </div>
             </div>
 
@@ -120,8 +116,8 @@ export default function ForgotPasswordPage() {
                         </form>
                     ) : (
                         <div className="bg-emerald-50 border border-emerald-100 rounded-3xl p-8 text-center animate-fade-in shadow-xl shadow-emerald-100/50">
-                            <div className="w-20 h-20 bg-emerald-100 rounded-full flex items-center justify-center mx-auto mb-6 animate-bounce-short">
-                                <BookOpen className="w-10 h-10 text-emerald-600" />
+                            <div className="w-20 h-20 bg-emerald-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                                <Mail className="w-10 h-10 text-emerald-600" />
                             </div>
                             <h3 className="text-2xl font-bold text-gray-900 mb-2">Cek Email Anda</h3>
                             <p className="text-gray-600 mb-8 text-base">
@@ -129,7 +125,7 @@ export default function ForgotPasswordPage() {
                             </p>
                             <Button
                                 variant="outline"
-                                className="w-full border-2 border-emerald-100 text-emerald-700 hover:bg-emerald-50 hover:border-emerald-300 hover:text-emerald-800 transition-colors h-12 font-bold rounded-xl"
+                                className="w-full border-2 border-emerald-200 text-emerald-700 hover:bg-emerald-50 hover:border-emerald-300 hover:text-emerald-800 transition-colors h-12 font-bold rounded-xl"
                                 onClick={() => setIsSubmitted(false)}
                             >
                                 Kirim Ulang Email
