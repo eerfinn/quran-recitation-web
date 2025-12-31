@@ -10,7 +10,7 @@ export default function MainLayout({ children }: MainLayoutProps) {
             <Navigation />
 
             {/* Main Content */}
-            <div className="lg:pl-64">
+            <div className="lg:pl-72">
                 <main className="pt-20 lg:pt-8 px-4 sm:px-6 lg:px-8 pb-10">
                     <div className="max-w-7xl mx-auto">
                         {children}
